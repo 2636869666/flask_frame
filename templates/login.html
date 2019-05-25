@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<div>
+    {% macro input(lable = '', type = '', name = '', id = '', placeholder = '',value = '' ) %}
+    <label>{{ lable }}</label><input type={{ type }} name={{ name }} id={{ id }} placeholder={{ placeholder }} value={{ value }}><br>
+    {% endmacro %}
+    <form method="post">
+        {{ input(lable = '用户名：', type = 'text', name = 'username', id = 'uname', placeholder = '请输入用户名')}}
+        {{ input(lable = '密码：', type = 'password', name = 'password', id = 'pwd', placeholder = '请输入密码')}}
+        {{ input(type = 'submit' , value = '点击登录') }}
+{#        {{ input(type = 'submit' , value = '注册') }}#}
+
+    </form>
+    <hr>
+    <form method="post">
+        用户名：<input type="text" name="username" id="uname" placeholder="请输入用户名"><br>
+        密码：<input type="password" name="password" id="pwd" placeholder="请输入密码"><br>
+        <input type="submit" value="登录">
+    </form>
+</div>
+</body>
+</html>
